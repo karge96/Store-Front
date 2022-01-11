@@ -19,8 +19,6 @@ function buildTemplate(data){
         img = '';
         if (product.url_image == ''  || product.url_image == null) {
           img = image.src;
-          console.log(image.src);
-          
         }else{img= product.url_image}
 
         // template del producto
@@ -37,20 +35,20 @@ function buildTemplate(data){
               <p><span> - ${product.discount} %</span></p>
             </div>
           </div>  
-        `})
-        template = `${template}
-          <div class="categorias">
-            <h2> ${category.name} </h2>
-            <div id="listado">
-              ${productsTemplate}
-            </div>
+        `
+      })
+      template = `${template}
+        <div class="categorias">
+          <h2> ${category.name} </h2>
+          <div id="listado">
+            ${productsTemplate}
           </div>
-        `;
-      } 
-
-    })
-    return template;
-  }
+        </div>
+      `;
+    } 
+  })
+  return template;
+}
 
 // funcion de la barra de busqueda
 function getData(q){
@@ -72,7 +70,9 @@ function getData(q){
 function emptyState(){
   return ` <div class="not-found">
   <h2>Producto no encontrado</h2>
-  <button>Ir al Inicio</button>
+    <a href="./index.html">
+      <button>Ir al Inicio</button>
+    </a>
   </div>
   `;
 }
