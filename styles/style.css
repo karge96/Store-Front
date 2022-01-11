@@ -89,7 +89,7 @@ button{
 .contenedor{
     width: 95%;
     margin: 0 auto;
-    
+    padding-bottom: 7rem;
 }
 .container-list{
     height: 100vh;
