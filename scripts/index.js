@@ -32,7 +32,7 @@ function buildTemplate(data){
             </div>
             <div class="precios">
               <p>Precio: $${product.price}</p>
-              <p>Desc:<span> - ${product.discount} %</span></p>
+              <p>Dto:<span> - ${product.discount} %</span></p>
             </div>
           </div>  
         `
