@@ -31,8 +31,8 @@ function buildTemplate(data){
               <h3>${product.productName}</h3>
             </div>
             <div class="precios">
-              <p> $${product.price}</p>
-              <p><span> - ${product.discount} %</span></p>
+              <p>Precio: $${product.price}</p>
+              <p>Desc:<span> - ${product.discount} %</span></p>
             </div>
           </div>  
         `
