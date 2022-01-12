@@ -22,8 +22,27 @@
             <button onclick="getData($('#searchBar').val());" id="boton" >Buscar</button>
         </div>
         <!-- fin de barra de busqueda -->
+
+
     </header>
     <div class="contenedor">
+        <!-- filtro por categoria(dropdown menu) -->
+        
+        <div class="dropdown">
+            <button class="dropbtn">Filtrar por categorias</button>
+            <div class="dropdown-content">
+                <a href="#searchBar">Todas las categorias</a>
+                <a href="#1">Bebida Energetica</a>
+                <a href="#2">Pisco</a>
+                <a href="#3">Ron</a>
+                <a href="#4">Bebidas</a>
+                <a href="#5">Snacks</a>
+                <a href="#6">Cerveza</a>
+                <a href="#7">Vodka</a>
+
+            </div>
+        </div>
+        <!-- fin del filtro -->
         <!-- Aca se mostraran los resultados traidos de la base de datos -->
         <div class="container pl-5 pr-5" id="container-list"></div>
     </div>

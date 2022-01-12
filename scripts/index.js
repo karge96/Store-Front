@@ -39,10 +39,13 @@ function buildTemplate(data){
       })
       template = `${template}
         <div class="categorias">
-          <h2> ${category.name} </h2>
+          <h2 id="${category.id}"> ${category.name} </h2>
           <div id="listado">
             ${productsTemplate}
           </div>
+          <a href="#searchBar">
+          <button>Ir al principio</button>
+          </a>
         </div>
       `;
     } 
@@ -67,6 +70,16 @@ function getData(q){
     },
   });
 }
+
+
+// activar busqueda con el boton "enter"
+document.getElementById("searchBar")
+.addEventListener("keyup", function(e) {
+  if (e.code === 'Enter') {
+    document.getElementById("boton").click();
+  }
+});
+
 function emptyState(){
   return ` <div class="not-found">
   <h2>Producto no encontrado</h2>
@@ -77,3 +90,5 @@ function emptyState(){
   `;
 }
 getData("");
+
+

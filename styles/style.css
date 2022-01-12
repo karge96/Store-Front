@@ -70,11 +70,20 @@ input{
     border-radius: .3rem;
     border: none;
 }
+
 input::placeholder {
-    padding: 1rem;
-    font-size: 1.2em;
+    padding: .5rem;
+    font-size: 1rem;
 }
-button{
+@media (min-width: 800px) {
+    input::placeholder {
+        padding: 1rem;
+        font-size: 1.2em;
+    }
+     
+}
+/* botones */
+button, .dropbtn{
     border: none;
     border-radius: .5rem;
     margin: 1rem;
@@ -84,7 +93,41 @@ button{
     padding: .5rem;
     font-size: 1rem;
     font-weight: 600;
+    text-transform: uppercase;
 }
+/* menu dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 14rem;
+    box-shadow: 1px 9px 17px 3px rgba(0,0,0,0.4);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 900;
+}
+  
+.dropdown-content a:hover {background-color: #b955b9ee}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #522652;
+}
+ 
 /* categorias y productos */
 .contenedor{
     width: 95%;
